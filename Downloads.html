@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>Downloads - Finvi</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+        }
+
+        .button-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        .button {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-label {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .table-container {
+            width: 100%;
+        }
+
+        .dialog-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .dialog-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .download-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #acceptButton:disabled {
+            background-color: #808080;
+            cursor: not-allowed;
+        }
+    </style>
+
+    <link rel='stylesheet' id='fl-builder-layout-3900-css'
+        href='https://finvi.com/wp-content/uploads/bb-plugin/cache/3900-layout.css?ver=4fdb5b1c0c243ebb241f289ffc171935'
+        media='all' />
+    <link rel='stylesheet' id='fl-builder-layout-bundle-e738ccefd2b12021eb2e179816a7ef17-css'
+        href='https://finvi.com/wp-content/uploads/bb-plugin/cache/e738ccefd2b12021eb2e179816a7ef17-layout-bundle.css?ver=2.8.0.7-1.4.9.2'
+        media='all' />
+
+    <link rel='stylesheet' id='bootstrap-4-css'
+        href='https://finvi.com/wp-content/themes/bb-theme/css/bootstrap-4.min.css?ver=1.7.15.2' media='all' />
+    <link rel='stylesheet' id='fl-automator-skin-css'
+        href='https://finvi.com/wp-content/uploads/bb-theme/skin-660ae1f50ee13.css?ver=1.7.15.2' media='all' />
+    <link rel='stylesheet' id='ci-finvi-theme-css'
+        href='https://finvi.com/wp-content/themes/bb-theme-child/main.css?ver=2.61.59' media='all' />
+    <script src="https://finvi.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+</head>
+
+<body
+    class="page-template-default page page-id-3900 fl-builder wp-schema-pro-2.7.17 tribe-no-js page-template-ci-finvi-theme fl-theme-builder-footer fl-theme-builder-footer-footer fl-theme-builder-header fl-theme-builder-header-header-transparent-build-185 fl-framework-bootstrap-4 fl-preset-default fl-full-width fl-search-active"
+    itemscope="itemscope" itemtype="https://schema.org/WebPage">
+    <div class="fl-page">
+        <header class="fl-builder-content fl-builder-content-3690 fl-builder-global-templates-locked"
+            data-post-id="3690" data-type="header" data-sticky="1" data-sticky-on="" data-sticky-breakpoint="medium"
+            data-shrink="1" data-overlay="1" data-overlay-bg="transparent" data-shrink-image-height="50px" role="banner"
+            itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+            <div class="fl-row fl-row-full-width fl-row-bg-color fl-node-bzeungpc83tw fl-row-default-height fl-row-align-center nav-header-build-185 nav-header--transparent"
+                data-node="bzeungpc83tw">
+                <div class="fl-row-content-wrap">
+                    <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                        <div class="fl-col-content fl-node-content">
+                            <div class="fl-module fl-module-photo fl-node-4fr9qjy6z2lv nav-header__logo"
+                                data-node="4fr9qjy6z2lv">
+                                <div class="fl-module-content fl-node-content">
+                                    <div class="fl-photo fl-photo-align-left" itemscope
+                                        itemtype="https://schema.org/ImageObject">
+                                        <div class="fl-photo-content fl-photo-img-png">
+                                            <a href="/" target="_self" itemprop="url">
+                                                <img loading="lazy" decoding="async"
+                                                    class="fl-photo-img wp-image-3206 size-full"
+                                                    src="https://finvi.com/wp-content/uploads/2021/09/white-finvi-logo.png"
+                                                    alt="Finvi" itemprop="image" height="54" width="140" title="Finvi"
+                                                    data-no-lazy="1" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="fl-main-content" class="fl-page-content" itemprop="mainContentOfPage" role="main">
+            <div class="fl-content-full container">
+                <div class="row">
+                    <div class="fl-content col-md-12">
+                        <article class="fl-post post-3900 page type-page status-publish hentry" id="fl-post-3900"
+                            itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+                            <div class="fl-post-content clearfix" itemprop="text">
+                                <div class="fl-builder-content fl-builder-content-3900 fl-builder-content-primary fl-builder-global-templates-locked"
+                                    data-post-id="3900">
+
+                                    <div class="fl-row fl-row-full-width fl-row-bg-photo fl-node-3wvmqosi4d6z fl-row-custom-height fl-row-align-bottom"
+                                        data-node="3wvmqosi4d6z">
+                                        <div class="fl-row-content-wrap">
+                                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                                                <h1 class="fl-heading">
+                                                    <span class="fl-heading-text"> Downloads </span>
+                                                </h1>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="fl-row-content-wrap">
+                                        <div class="fl-row-content fl-row-fixed-width fl-node-content">
+                                            <h3 class="fl-heading">
+                                                <span class="fl-heading-text">Place holder for Software download
+                                                    content</span>
+                                            </h3>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="dialog-container" id="dialogContainer">
+                                        <div class="dialog-box">
+                                            <h2>Terms and Conditions</h2>
+                                            <p> </p>
+                                            <label for="agreeCheckbox1">
+                                                <input type="checkbox" id="agreeCheckbox1" onchange="checkBoth()"> I
+                                                have purchased the software
+                                            </label>
+                                            <br>
+                                            <label for="agreeCheckbox2">
+                                                <input type="checkbox" id="agreeCheckbox2" onchange="checkBoth()"> Terms
+                                                and conditions
+                                            </label>
+                                            <div>
+                                                <button onclick="acceptDownload()" id="acceptButton"
+                                                    disabled>Download</button>
+                                                <button onclick="closeDialog()">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="fl-row fl-row-full-width fl-row-bg-none fl-node-iv83uqhfnxz5 fl-row-default-height fl-row-align-center"
+                                        data-node="iv83uqhfnxz5">
+                                        <div class="fl-row-content-wrap">
+                                            <div class="fl-row-content fl-row-fixed-width fl-node-content">
+
+                                                <div class="col-md-12">
+                                                    <div class="button-row"></div>
+                                                </div>
+
+                                                <script>
+
+                                                    var jsonData;
+
+                                                    jsonData = [
+                                                        {
+                                                            "Product 1": [
+                                                                { "Product Name": "P-1", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-2", "version": 1.5, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-3", "version": 1.5, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-4", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 2": [
+                                                                { "Product Name": "P-3", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-4", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 3": [
+                                                                { "Product Name": "P-5", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-6", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 4": [
+                                                                { "Product Name": "P-7", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-8", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 5": [
+                                                                { "Product Name": "P-9", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-10", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 6": [
+                                                                { "Product Name": "P-11", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-12", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 7": [
+                                                                { "Product Name": "P-13", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-14", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 8": [
+                                                                { "Product Name": "P-15", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-16", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 9": [
+                                                                { "Product Name": "P-17", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-18", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 10": [
+                                                                { "Product Name": "P-19", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-20", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 11": [
+                                                                { "Product Name": "P-21", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-22", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 12": [
+                                                                { "Product Name": "P-23", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-24", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 13": [
+                                                                { "Product Name": "P-25", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-26", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 14": [
+                                                                { "Product Name": "P-27", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-28", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Product 15": [
+                                                                { "Product Name": "P-29", "version": 1.4, "Download Link": "http://example.com" },
+                                                                { "Product Name": "P-30", "version": 1.5, "Download Link": "http://example.com" }
+                                                            ]
+                                                        }
+                                                    ];
+                                                    function populateTable(tableId, data) {
+                                                        var table = document.getElementById(tableId);
+                                                        var tbody = table.getElementsByTagName('tbody')[0];
+                                                        var thead = table.getElementsByTagName('thead')[0];
+                                                        tbody.innerHTML = '';
+                                                        thead.innerHTML = '';
+                                                        var columns = Object.keys(data[0]);
+
+                                                        var headerRow = thead.insertRow();
+                                                        columns.forEach(function (column) {
+                                                            var th = document.createElement('th');
+                                                            th.textContent = column;
+                                                            headerRow.appendChild(th);
+                                                        });
+
+                                                        data.forEach(function (entry) {
+                                                            var row = tbody.insertRow();
+                                                            columns.forEach(function (column) {
+                                                                var cell = row.insertCell();
+                                                                if (column === 'Download Link') {
+
+                                                                    var button = document.createElement('button');
+                                                                    button.addEventListener('click', function () {
+                                                                        showDialog();
+                                                                    })
+                                                                    button.textContent = 'Download';
+                                                                    cell.appendChild(button);
+                                                                } else {
+                                                                    cell.textContent = entry[column];
+                                                                }
+                                                            });
+                                                        });
+                                                    }
+                                                    jsonData.forEach(function (tableData, index) {
+                                                        var tableName = Object.keys(tableData)[0];
+                                                        var tableId = 'table' + (index + 1);
+
+                                                        var img = document.createElement('img');
+                                                        img.src = 'Resources/1-10.png';
+                                                        img.alt = tableName;
+                                                        img.classList.add('button');
+                                                        img.style.cursor = 'pointer';
+                                                        img.onclick = function () {
+                                                            toggleTable(tableId);
+                                                        };
+                                                        var label = document.createElement('label');
+                                                        label.textContent = tableName;
+                                                        label.classList.add('button-label');
+
+                                                        var row = document.querySelector('.button-row');
+                                                        var buttonContainer = document.createElement('div');
+                                                        buttonContainer.classList.add('button-container');
+                                                        buttonContainer.appendChild(img);
+                                                        buttonContainer.appendChild(label);
+                                                        row.appendChild(buttonContainer);
+
+                                                        var tableContainer = document.createElement('div');
+                                                        tableContainer.classList.add('table-container');
+                                                        tableContainer.innerHTML = '<table id="' + tableId + '" style="display: none;"><thead></thead><tbody></tbody></table>';
+                                                        row.appendChild(tableContainer);
+
+                                                        populateTable(tableId, tableData[tableName]);
+                                                    });
+
+
+                                                    function showDialog() {
+                                                        document.getElementById('dialogContainer').style.display = 'flex';
+                                                    }
+
+                                                    function toggleTable(tableId) {
+                                                        var table = document.getElementById(tableId);
+                                                        if (table.style.display === 'none') {
+                                                            table.style.display = 'table';
+                                                        } else {
+                                                            table.style.display = 'none';
+                                                        }
+                                                    }
+
+                                                    function closeDialog() {
+                                                        document.getElementById('dialogContainer').style.display = 'none';
+                                                    }
+
+                                                    function enableAcceptButton() {
+                                                        var agreeCheckbox1 = document.getElementById('agreeCheckbox1');
+                                                        var agreeCheckbox2 = document.getElementById('agreeCheckbox2');
+                                                        var acceptButton = document.getElementById('acceptButton');
+                                                        acceptButton.disabled = !(agreeCheckbox1.checked && agreeCheckbox2.checked);
+                                                    }
+
+                                                    function acceptDownload() {
+                                                        alert('Downloading...');
+                                                        closeDialog();
+                                                    }
+
+                                                    function checkBoth() {
+                                                        var checkbox1 = document.getElementById("agreeCheckbox1");
+                                                        var checkbox2 = document.getElementById("agreeCheckbox2");
+                                                        var acceptButton = document.getElementById("acceptButton");
+
+                                                        if (checkbox1.checked && checkbox2.checked) {
+                                                            enableAcceptButton();
+                                                        } else {
+                                                            acceptButton.disabled = true;
+                                                        }
+                                                    }
+                                                </script>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="https://finvi.com/wp-content/uploads/bb-plugin/cache/3900-layout.js?ver=2f1df18399e6d8717fe1774599ea579b"
+        id="fl-builder-layout-3900-js"></script>
+    <script src="https://finvi.com/wp-content/plugins/bb-plugin/js/jquery.imagesloaded.min.js?ver=2.8.0.7"
+        id="imagesloaded-js"></script>
+    <script src="https://finvi.com/wp-content/plugins/bb-plugin/js/jquery.ba-throttle-debounce.min.js?ver=2.8.0.7"
+        id="jquery-throttle-js"></script>
+    <script
+        src="https://finvi.com/wp-content/uploads/bb-plugin/cache/ee974ef023af70165c235293c6ab0811-layout-bundle.js?ver=2.8.0.7-1.4.9.2"
+        id="fl-builder-layout-bundle-ee974ef023af70165c235293c6ab0811-js"></script>
+
+</body>
+
+</html>
